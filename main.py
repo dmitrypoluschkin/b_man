@@ -47,9 +47,9 @@ async def band_genre(genre: GenreURLChoices) -> list[dict]:
         ]
 
 
-@app.post("/band/")
+@app.post("/bands")
 async def create_band(band_data: BandCreate) -> BandWithID:
-    id = Band[-1]['id'] + 1
+    id = BANDS[-1]['id'] + 1
     band = BandWithID(id=id, **band_data.model_dump()).model_dump()
-    Bands.append(band)
+    BANDS.append(band)
     return band
