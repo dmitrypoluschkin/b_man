@@ -10,7 +10,7 @@ BANDS = [
     {"id": 3, "name": "Black Sabbath", "genre": "Metal", "albums": [{
         "title": "Master of Reality", "release_date": "1971-07-21"
     }]},
-    {"id": 4, "name": "Wu-Tang Clan", "genre": "Hip Hop"},
+    {"id": 4, "name": "Wu-Tang Clan", "genre": "Hip-Hop"},
     {"id": 5, "name": "The Kiss", "genre": "Rock"},
 ]
 
@@ -22,7 +22,7 @@ async def bands(genre: GenreURLChoices | None = None, has_albums: bool = False) 
 
     if genre:
         band_list = [
-            b for b in band_list if b.genre.lower() == genre.value
+            b for b in band_list if b.genre.value.lower() == genre.value
         ]
 
     if has_albums:
