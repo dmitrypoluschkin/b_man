@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Path, Query
-from schemas import GenreURLChoices, BandBase, BandCreate, BandWithID
+from models import GenreURLChoices, BandBase, BandCreate, Band, Album
 from typing import Annotated
 
 app = FastAPI()
