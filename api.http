@@ -1,20 +1,16 @@
-POST http://localhost:8000/bands/
+POST http://localhost:8000/bands
 Content-Type: application/json
 
 {
-    "name": "Boards of Canada",
-    "genre": "Electronic",
+    "name": "Barsuk",
+    "genre": "elecronic",
     "albums": [
         {
-            "title": "Tommorrow's Harvest",
-            "release_date": "2013-01-01"
+            "title": "son na snegu",
+            "release_date": "2020-02-04"
         },
-        {
-            "title": "Music Has The Ring To Children",
-            "release_date": "1998-01-01"
-        }
     ]
 }
 
 ###
-GET http://localhost:8000/bands?genre=jazz
+GET http://localhost:8000/bands
